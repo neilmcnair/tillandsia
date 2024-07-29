@@ -40,7 +40,7 @@ bowtie2 --very-sensitive-local -p 12 -x ../alignment/Ananas_chloro_mito/indices/
 
 # filter out mapped reads (using samtools) (so we are left with reads that didn't align to either chloroplast or to mitochondrion)
 
-samtools view -Shb -@ 12 -f 4 -F 256 -o ${name}.no_organelle.bam ${name}.sam
+samtools view -Shb -@ 12 -f 12 -o ${name}.no_organelle.bam ${name}.sam
 
 rm ${name}.sam
 
